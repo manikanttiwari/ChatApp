@@ -3,10 +3,10 @@
 const mongo = require('mongodb').MongoClient;
 
 //it will allow socket.io to run on  port 4000
-const client = require('socket.io').listen(4000).sockets;
+const client = require('socket.io').listen(25000).sockets;
 
 // Connect to mongo
-mongo.connect('mongodb://127.0.0.1/mongochat', function(err, db){
+mongo.connect('mongodb://localhost:27017/mongochat', function(err, db){
     if(err){
         throw err;
     }
